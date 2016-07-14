@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/cam.png"> 
+
+    <title>Le Cinematographe</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="MyTemplates/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="MyTemplates/css/navbar-fixed-top.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. -->
+    <script src="MyTemplates/js/ie-emulation-modes-warning.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+<!-- NAVBAR -->
+      <nav class="navbar navbar-inverse navbar-fixed-top"> <!-- default=blanc; inverse=noir-->
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="home.html"> Le Cinematographe </a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+			  <!-- la page actu: <li class="active"></li><a href="xxx.html">bla</a></li> -->
+              <!-- une autre page: <li><a href="choix-cinema.html">Cinemas</a></li> -->
+            <ul class="nav navbar-nav">
+				<li><a href="alaffiche.html"> <img src="images/cam.jpg" alt="oops"/> Films à l'affiche</a>  </li>
+			    <li><a href="cinema.html"> <img src="images/ticket.jpg" alt="oops"/> Cinemas</a>  </li>
+				<li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <img src="images/film.jpg" alt="oops"/>Recherche de films <span class="caret"></span></a>
+                
+                <ul class="dropdown-menu" role="menu">
+				  <li class="dropdown-header"> Selectionner un filtre</li> 
+                 
+                  <li><a href="populaire.html">Par Popularité</a></li>
+                  <li><a href="genre.html">Par Genre</a></li>
+                </ul>
+              </li>
+            
+			<li><a href="login.html"> <img src="images/chair.jpg" alt="oops"/> Mon Compte </a>  </li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <img src="images/cine.jpg" alt="oops"/>About <span class="caret"></span></a>
+				
+                <ul class="dropdown-menu" role="menu">
+				  <li class="dropdown-header"> Fonctionnement du site</li> 
+				  
+				  <li><a href="architecture.html">Architecture</a></li>
+                  <li><a href="BD.html">Base de Donnees</a></li>
+                  <li><a href="interfaces.html">Interface</a></li>
+                  <li><a href="equipe.html">Equipe de developpement</a></li>
+                </ul>
+              </li>
+			
+            <!-- <span class="glyphicon glyphicon-user"></span> -->
+            </ul>
+          </div><!--/.nav-collapse -->
+          
+
+		  
+        </div><!--/.container-fluid -->
+      </nav>
+
+      <!-- FIN NAVBAR -->
+      
+      
+	<!-- AJOUT DES FILMS -->
+    <div class="container marketing">
+		
+
+			
+      
+          
+          <div>
+		  <h3>Ajouter un film</h3>
+		  <p>Saisir le nom du film en complétant les champs:</p>
+		  
+		  <!-- FORMULAIRE -->
+		  <form role="form" id="formMovie" action="#">
+			  
+			
+			<div class="form-group">
+				
+				  <!-- Nom du film -->
+				  <label for="usr">Nom du film :</label>
+				  <input type="text" class="form-control" id="nom_film">
+				
+				  <!-- Nom du Réalisateur -->
+				  <label for="usr">Nom du Réalisateur :</label>
+				  <input type="text" class="form-control" id="nom_realisateur">
+				
+				  <!-- Tête d'Affiche  -->
+				  <label for="usr">Tête d'affiche :</label>
+				  <input type="text" class="form-control" id="tete_affiche">
+				  
+				   <!-- Année de parution  -->
+				  <label for="usr">Année :</label>
+				  <input type="text" class="form-control" id="annee">
+				 
+				  
+				   <!-- Genre  -->
+				<div class="checkbox">
+						 
+						 <label><input type="checkbox" id="Comedie"> Comédie          </label>
+						 <label><input type="checkbox" id="Romance"> Romance          </label>
+						 <label><input type="checkbox" id="Drame"> Drame            </label>
+						 <label><input type="checkbox" id="Science_fiction"> Science Fiction  </label>
+						 <label><input type="checkbox" id="Action"> Action           </label>
+						 <label><input type="checkbox" id="Animation"> Animation        </label>
+						 <label><input type="checkbox" id="Tragedie"> Traédie          </label>
+					
+				</div>
+			  
+			     
+			</div>
+			
+			<!-- Bouton input -->
+			<div>
+				<input type="submit" value="Envoyer" />
+			</div>
+			
+		  </form>
+		</div>
+		<p></p>
+		<div id="result"></div>
+		
+		
+	<!-- FIN AJOUT FILM--->
+	
+	<!-- AJOUT DES PROJECTIONS -->
+	<br/>
+		  <h3>Ajouter une projection</h3>
+		  <p>Complétez les champs:</p>
+	
+	<!-- FORMULAIRE -->
+		  <form role="form" id="formProjection" action="#">
+			  
+			
+			<div class="form-group">
+				
+				  <!-- Cinema -->
+				  <label for="usr">Nom du cinema</label>
+				  <input type="text" class="form-control" id="Cinema">
+				  
+				
+				  <!-- numsalle -->
+				  <label for="usr">Numéro de Salle:</label>
+				  <input type="text" class="form-control" id="num_salle">
+				
+				  <!-- FilmId  -->
+				  <label for="usr">Film :</label>
+				  <input type="text" class="form-control" id="FilmId">
+				  
+				   <!-- horaire  -->
+				  <label for="usr">Horaire :</label>
+				  <input type="text" class="form-control" id="horaire">
+			
+						 
+				  <label for="usr">Date :</label>
+				  <input type="text" class="form-control" id="date">
+				  
+			     
+			</div>
+			
+	
+	<!-- Bouton input -->
+			<div>
+				<input type="submit" value="Envoyer" />
+			</div>
+			
+		  </form>
+		</div>
+		<p></p>
+		<div id="result2"></div>
+		
+		
+	<!--FIN AJOUT DES PROJECTIONS -->
+			  
+
+    <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="MyTemplates/js/jquery.js"></script>
+    <script src="MyTemplates/js/bootstrap.js"></script>
+    <script src="form.js"></script>
+    <script src="MyTemplates/js/ie10-viewport-bug-workaround.js"></script>
+  
+
+</body></html>
